@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acasa</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+    <div class="banner">
+        <h1>Concursul de cultura tehnica in Domeniul Studiului Tehnicilor de Automatizare <br> "Robotech"</h1>
+    </div>
+    <div class="marquee">
+        <span data-text="eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco ">eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco </span>
+    </div>
+    <header>
+        <div class="menu">
+            <ul>
+                <li><a href="1.html"><img src="icons8-home-50 (1).png" alt=""></a></li>
+                <li><a href=""><img src="icons8-information-50.png" alt=""></a>
+                    <div class="drop">
+                        <ul>
+                            <li><a href="2.html">Impact ecnomic</a></li> <br>
+                            <li><a href="3.html">Tipuri de masini electrice</a></li><br>
+                            <li><a href="4.html">Modele de masini electrice</a></li><br>
+                            <li><a href="5.html">Statii de încărcare</a></li><br>
+                            <li><a href="6.html">Date statistice</a></li><br>
+                            <li><a href="7.html">Beneficii VS dezavantaje</a></li><br>
+                            <li><a href="9.html">Subvenții și finanțări</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><img src="icons8-video-50.png" alt=""></a>
+                    <div class="drop2">
+                        <ul>
+                            <li><a href="https://youtu.be/WqDXO8MdaO4?si=4gjrKcvYIbG-Az_p">ELECTRIC VS MOTORINA, Care Polueaza Mai Mult?</a></li>
+                            <li><a href="https://youtu.be/tJfERzrG-D8?si=_pyGG-JX9uStTtUm">How an Electric Car Works? Its Parts & Functions</a></li>
+                            <li><a href="https://youtu.be/nl-KMKXrAsg?si=3BpFJnHO0-GMCNST">Care sunt cele mai bune masini electrice in 2024</a></li>
+                            <li><a href="https://youtu.be/p9KG7u66HWk?si=n4JNi2hvNoyCihYL">2024 Xiaomi SU7 in-depth Walkaround</a></li>
+                            <li><a href="https://youtu.be/-t6AhJgvMz4?si=HED_IrWslcUQgNYQ">10 Cele Mai BUNE si IEFTINE Masini ELECTRICE In 2023</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="https://ifipcgd1mmb.typeform.com/to/v1S8o95b"><img src="icons8-contact-50.png" alt=""></a></li>
+                <li><a href="https://ifipcgd1mmb.typeform.com/to/jW2G4oo5"><img src="icons8-customer-survey-50.png" alt=""></a></li>
+                <li><a href="8.html"><img src="icons8-bibliology-50.png" alt=""></a></li>
+            </ul>
+            
+        </div>
+    </header>
+
+    <div class="titlu">
+        <h1><Span style="color: #01D758;">Eco</Span><span style="color: #01D758;">Drive</span></h1>
+        <h2>Economia  în lumea mașinilor electrice</h2>
+    </div>
+
+  <!-- Butonul care deschide modalul -->
+  <button class="open-modal-button" onclick="deschideModal()"></button>
+
+  <!-- Modalul -->
+  <div id="modal" class="modal-background">
+    <div class="modal-content">
+      <span class="close-modal" onclick="inchideModal()">&times;</span>
+      <h2 style="color: #7FDD4C;">Calculator Consum și Cost</h2>
+
+      <!-- Input-uri -->
+      <label for="distanta">Distanța (km):</label>
+      <input type="number" id="distanta" placeholder="Ex: 100">
+
+      <label for="consum">Consum (kWh/100 km):</label>
+      <input type="number" id="consum" placeholder="Ex: 20">
+
+      <label for="pret">Preț energie (lei/kWh):</label>
+      <input type="number" id="pret" placeholder="Ex: 0.5">
+
+      <!-- Buton de calcul -->
+      <button onclick="calculeaza()">Calculează</button>
+
+      <!-- Afișare rezultat -->
+      <div class="rezultat" id="rezultat"></div>
+    </div>
+  </div>
+
+  <script>
+    // Funcție pentru deschiderea modalului
+    function deschideModal() {
+      document.getElementById('modal').style.display = 'flex';
+    }
+
+    // Funcție pentru închiderea modalului
+    function inchideModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+
+    // Funcție pentru calcul
+    function calculeaza() {
+      // Obține valorile din input-uri
+      const distanta = parseFloat(document.getElementById('distanta').value);
+      const consum = parseFloat(document.getElementById('consum').value);
+      const pret = parseFloat(document.getElementById('pret').value);
+
+      // Calculează consumul de energie (în kWh)
+      const energie = (consum / 100) * distanta;
+
+      // Calculează costul călătoriei (în lei)
+      const cost = energie * pret;
+
+      // Afișează rezultatele
+      document.getElementById('rezultat').innerHTML = `
+        <p>Energie consumată: ${energie.toFixed(2)} kWh</p>
+        <p>Cost călătorie: ${cost.toFixed(2)} lei</p>
+      `;
+    }
+  </script>
+     <!-- Casete cu informații despre economie -->
+     <div class="info-boxes">
+        <div class="info-box">
+            <h3>Economie pe termen lung</h3>
+            <p>Mașinile electrice au costuri de întreținere mai mici și consumă mai puțină energie comparativ cu mașinile pe combustibil fosil, ceea ce duce la economii semnificative pe termen lung.</p>
+        </div>
+        <div class="info-box">
+            <h3>Incentive fiscale</h3>
+            <p>Multe țări oferă reduceri de taxe și subvenții pentru achiziționarea de mașini electrice, reducând costul inițial și stimulând economia locală.</p>
+        </div>
+        <div class="info-box">
+            <h3>Impact asupra economiei</h3>
+            <p>Tranziția către mașini electrice stimulează creșterea industriei bateriilor și a infrastructurii de încărcare, creând noi locuri de muncă și oportunități economice.</p>
+        </div>
+    </div>
+
+    <!-- Secțiune video -->
+    <div class="video-container">
+        <h3>Video despre economie și mașini electrice</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/tJfERzrG-D8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/WqDXO8MdaO4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/nl-KMKXrAsg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="faq-section">
+        <h3>Întrebări frecvente despre economie și mașini electrice</h3>
+        <div class="faq-box">
+            <div class="faq-question">
+                <h4>Care sunt avantajele economice ale mașinilor electrice?</h4>
+            </div>
+            <div class="faq-answer">
+                <p>Mașinile electrice au costuri de întreținere mai mici, beneficiază de incentive fiscale și reduc dependența de combustibili fosili, contribuind la economii pe termen lung.</p>
+            </div>
+        </div>
+        <div class="faq-box">
+            <div class="faq-question">
+                <h4>Cum afectează mașinile electrice economia globală?</h4>
+            </div>
+            <div class="faq-answer">
+                <p>Ele stimulează creșterea industriei bateriilor, a infrastructurii de încărcare și a energiei regenerabile, creând noi locuri de muncă și reducând emisiile de CO2.</p>
+            </div>
+        </div>
+        <div class="faq-box">
+            <div class="faq-question">
+                <h4>Ce costuri inițiale au mașinile electrice?</h4>
+            </div>
+            <div class="faq-answer">
+                <p>Deși costul inițial poate fi mai mare, acesta este compensat de economiile pe termen lung și de subvențiile guvernamentale.</p>
+            </div>
+        </div>
+        <div class="faq-box">
+            <div class="faq-question">
+                <h4>Cum influenteaza masinile electrice economia?</h4>
+            </div>
+            <div class="faq-answer">
+                <p>Mașinile electrice stimulează investițiile, creează locuri de muncă în industrii noi și reduc costurile de exploatare. Totodată, schimbă piața energetică și transformă industria auto, influențând economia globală.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">  
+        <div class="container">
+            <div class="row">
+                <h1 class="text-stanga">Creat de: Pechianu Razvan</h1>
+                <a href="http://www.lspvs.ro/"><img style="width: 120px; height: 120px;" src="image-removebg-preview (2).png" alt=""></a>
+                <h1 class="text-dreapta">Profesor coordonator: Tiron Loredana</h1> 
+            </div>
+            <div class="row">
+                <h2 class="text-dedesupt">&copy;2025 EcoDrive</h2>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+       
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

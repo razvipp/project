@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date statistice</title>
+    <link rel="stylesheet" href="6.css">
+</head>
+<body>
+    <div class="banner">
+        <h1>Concursul de cultura tehnica in Domeniul Studiului Tehnicilor de Automatizare <br> "Robotech"</h1>
+    </div>
+    <div class="marquee">
+        <span data-text="eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco ">eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco eco </span>
+      </div>
+      <header>
+        <div class="menu">
+            <ul>
+                <li><a href="1.html"><img src="icons8-home-50 (1).png" alt=""></a></li>
+                <li><a href="#"><img src="icons8-information-50.png" alt=""></a>
+                <div class="drop">
+                    <ul>
+                        <li><a href="2.html">Impact ecnomic</a></li> <br>
+                        <li><a href="3.html">Tipuri de masini electrice</a></li><br>
+                        <li><a href="4.html">Modele de masini electrice</a></li><br>
+                        <li><a href="5.html">Statii de încărcare</a></li><br>
+                        <li><a href="6.html">Date statistice</a></li><br>
+                        <li><a href="7.html">Beneficii VS dezavantaje</a></li><br>
+                        <li><a href="9.html">Subvenții și finanțări</a></li>
+                    </ul>
+                </div></li>
+                
+                <li><a href="#"><img src="icons8-video-50.png" alt=""></a>
+                    <div class="drop2">
+                        <ul>
+                            
+                        <li><a href="https://youtu.be/WqDXO8MdaO4?si=4gjrKcvYIbG-Az_p">ELECTRIC VS MOTORINA, Care Polueaza Mai Mult?</a></li>
+                        <li><a href="https://youtu.be/tJfERzrG-D8?si=_pyGG-JX9uStTtUm">How an Electric Car Works? Its Parts & Functions</a></li>
+                        <li><a href="https://youtu.be/nl-KMKXrAsg?si=3BpFJnHO0-GMCNST">Care sunt cele mai bune masini electrice in 2024</a></li>
+                        <li><a href="https://youtu.be/p9KG7u66HWk?si=n4JNi2hvNoyCihYL">2024 Xiaomi SU7 in-depth Walkaround</a></li>
+                        <li><a href="https://youtu.be/-t6AhJgvMz4?si=HED_IrWslcUQgNYQ">10 Cele Mai BUNE si IEFTINE Masini ELECTRICE In 2023</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="https://ifipcgd1mmb.typeform.com/to/v1S8o95b"><img src="icons8-contact-50.png" alt=""></a></li>
+                <li><a href="https://ifipcgd1mmb.typeform.com/to/jW2G4oo5"><img src="icons8-customer-survey-50.png" alt=""></a></li>
+                <li><a href="8.html"><img src="icons8-bibliology-50.png" alt=""></a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="graph">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawCharts);
+
+      function drawCharts() {
+        drawEuropeChart();
+        drawGlobalChart();
+      }
+
+      function drawEuropeChart() {
+        var euData = google.visualization.arrayToDataTable([
+          ['Țară', 'Mașini vândute', { role: 'style' }],
+          ['Germania', 600000, '#3366cc'],
+          ['Franța', 400000, '#dc3912'],
+          ['Marea Britanie', 500000, '#ff9900'],
+          ['Italia', 250000, '#109618'],
+          ['Spania', 200000, '#990099'],
+          ['Olanda', 150000, '#0099c6'],
+          ['Norvegia', 120000, '#dd4477'],
+          ['România', 54000, '#FFD700']
+        ]);
+
+        var euOptions = {
+          title: 'Vânzările de mașini electrice în Uniunea Europeană (2024)',
+          vAxis: {title: 'Număr de mașini vândute', logScale: true},
+          hAxis: {title: 'Țară'},
+          legend: 'none',
+          bar: { groupWidth: '70%' },
+          annotations: { alwaysOutside: true, textStyle: { fontSize: 12, bold: true } }
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('eu_chart'));
+        chart.draw(euData, euOptions);
+      }
+
+      function drawGlobalChart() {
+        var globalData = google.visualization.arrayToDataTable([
+          ['Regiune', 'Mașini vândute', { role: 'style' }],
+          ['China', 11000000, '#3366cc'],
+          ['SUA', 1400000, '#dc3912'],
+          ['Europa', 2500000, '#ff9900'], 
+          ['India', 900000, '#109618'],
+          ['Japonia', 600000, '#990099'],
+          ['America de Sud', 300000, '#0099c6'],
+          ['Africa', 100000, '#dd4477'],
+          ['Australia', 120000, '#FFD700']
+        ]);
+
+        var globalOptions = {
+          title: 'Vânzările globale de mașini electrice (2024)',
+          vAxis: {title: 'Număr de mașini vândute', logScale: true},
+          hAxis: {title: 'Regiune'},
+          legend: 'none',
+          bar: { groupWidth: '70%' },
+          annotations: { alwaysOutside: true, textStyle: { fontSize: 12, bold: true } }
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('global_chart'));
+        chart.draw(globalData, globalOptions);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="eu_chart" style="width: 900px; height: 500px; margin: auto;"></div>
+    <div id="global_chart" style="width: 900px; height: 500px; margin: auto; margin-top: 50px;"></div>
+  </body>
+</div>
+
+<footer class="footer">  
+    <div class="container">
+        <div class="row">
+            <h1 class="text-stanga">Creat de: Pechianu Razvan</h1>
+            <a href="http://www.lspvs.ro/"><img style="width: 120px; height: 120px;" src="image-removebg-preview (2).png" alt=""></a>
+            <h1 class="text-dreapta">Profesor coordonator: Tiron Loredana</h1> 
+        </div>
+        <div class="row">
+            <h2 class="text-dedesupt">&copy;2025 EcoDrive</h2>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

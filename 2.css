@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Rancho&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(68,238,128,0.5270483193277311) 0%);
+    font-family: Arial, sans-serif;
+}
+
+.banner h1 {
+    color: white;
+    text-align: center;
+    background-image: url(scott-webb-e6VmcXF8llA-unsplash.jpg);
+    padding: 20px;
+    background-size: cover;
+}
+
+.marquee {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    background: white;
+    color: green;
+}
+
+.marquee span {
+    display: inline-block;
+    min-width: 200%;
+    animation: scrollText 30s linear infinite;
+    font-size: 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.marquee span::before,
+.marquee span::after {
+    content: attr(data-text);
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+header {
+    position: relative;
+    z-index: 2;
+}
+
+.menu {
+    background-color: white;
+    position: absolute;
+    width: 700px;
+    border-radius: 50px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.menu ul li {
+    list-style: none;
+    display: inline-flex;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    padding: 20px;
+}
+
+.drop {
+    display: none;
+}
+
+.drop ul li a {
+    color: #7FDD4C;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.menu ul li:hover .drop {
+    display: block;
+    position: absolute;
+    top: 100%;
+    background-color: white;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.menu ul li:hover .drop ul {
+    display: block;
+    margin: 0px;
+}
+
+.menu ul li:hover .drop ul li {
+    width: 230px;
+}
+
+.drop2 {
+    display: none;
+}
+
+.drop2 ul li a {
+    color: #7FDD4C;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: left;
+}
+
+.menu ul li:hover .drop2 {
+    display: block;
+    position: absolute;
+    top: 100%;
+    background-color: white;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.menu ul li:hover .drop2 ul {
+    width: 250px;
+    display: block;
+}
+
+.menu ul li:hover .drop2 ul li {
+    width: 230px;
+    color: aliceblue;
+}
+
+.menu ul li a:hover {
+    color: green;
+}
+
+.main-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 180px auto 0;
+    background: #f4f4f4;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.main-content h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.caseta {
+    display: flex;
+    align-items: center;
+
+}
+
+.caseta .continut {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.caseta .imagine {
+    width: 40%;
+    margin-right: 20px;
+}
+
+.caseta .imagine img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.caseta .text {
+    width: 60%;
+}
+
+.caseta h2 {
+    color: #218838;
+    margin-bottom: 10px;
+}
+
+.caseta p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.butoane {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.butoane button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    width: 140px;
+}
+
+.butoane button:hover {
+    background: #218838;
+}
+
+.info {
+    display: none;
+    background: #e9ecef;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+
+.caseta.dreapta .continut {
+    flex-direction: row-reverse;
+}
+
+.caseta.dreapta .imagine {
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+.tabel {
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+.tabel table {
+    margin-top: 40px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabel th, .tabel td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.tabel th {
+    background-color: #218838;
+    color: white;
+}
+
+.calculator {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.calculator input {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.calculator button {
+    padding: 10px 20px;
+    background:#218838;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calculator button:hover {
+    background: #218838;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    background-image: url(engin-akyurt-HEMIBJ8QQuA-unsplash.jpg);
+    background-size: 1000px;
+    width: 100%;
+    height: 200px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.text-stanga {
+    text-align: left;
+    color: white;
+    flex: 1;
+}
+
+.text-dreapta {
+    text-align: right;
+    color: white;
+    flex: 1;
+}
+
+.text-dedesupt {
+    margin-top: 40px;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .caseta .continut {
+        flex-direction: column;
+    }
+    .caseta .imagine, .caseta .text {
+        width: 100%;
+    }
+    .caseta.dreapta .continut {
+        flex-direction: column;
+    }
+    .caseta.dreapta .imagine {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

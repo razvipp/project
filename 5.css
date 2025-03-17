@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Rancho&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+  height: 800px;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(68,238,128,0.5270483193277311) 0%);
+    
+}
+
+.banner h1{
+    color: white;
+    text-align: center;
+    background-image:url(scott-webb-e6VmcXF8llA-unsplash.jpg) ;
+}
+.menu{
+  z-index: 2;
+  background-color: white;
+    position: absolute;
+    width: 600px;
+    border-radius: 50px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%); 
+    margin-top: 50px;
+    padding-left:20px;
+    padding-right: 20px;
+}
+.menu ul li {
+    list-style: none;
+    display:inline-flex;
+    
+}
+
+.menu ul li a{
+    text-decoration: none;
+    padding: 20px;
+    
+
+
+  
+    
+}
+
+.drop{
+  display: none;
+}
+.drop ul li a{
+  color: #7FDD4C;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.menu ul li:hover .drop{
+  display: block;
+  position: absolute;
+  top: 100%;
+  background-color:white;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  
+  
+   }
+.menu ul li:hover .drop ul {
+  
+  display: block;
+  margin: 0px;
+}
+.menu ul li:hover .drop ul li {
+  width: 230px;
+  
+  
+}
+.drop2{
+  display: none;
+}
+
+.drop2 ul li a{
+  color: #7FDD4C;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: left;
+  
+}
+.menu ul li:hover .drop2{
+  display: block;
+  position: absolute;
+  top: 100%;
+  background-color:white;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  
+  
+   }
+.menu ul li:hover .drop2 ul {
+  width: 250px;
+  display: block;
+ 
+}
+.menu ul li:hover .drop2 ul li {
+  width: 230px;
+  color: aliceblue;
+  
+}
+.menu ul li a:hover{
+  color: green;
+}
+
+.titlu{
+    position: relative;
+    margin-top: 250px;
+    text-align: center;
+}
+.titlu h1{
+    font-size: 220px;
+    font-family: "Rancho"; 
+  -webkit-text-stroke-width: 0.7px;
+  -webkit-text-stroke-color: black;
+
+}
+.titlu h2{
+    color: greenyellow;
+    font-size: 60px;
+    font-family: "Rancho", cursive; 
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  font-family: "Dancing Script", cursive;
+  
+}
+
+
+
+@keyframes scrollText {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .marquee {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    background: white; 
+    color: green; 
+  }
+  
+  .marquee span {
+    display: inline-block;
+    min-width: 200%; 
+    animation: scrollText 30s linear infinite;
+    font-size: 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+
+  .marquee span::before,
+  .marquee span::after {
+    content: attr(data-text);
+  }
+
+  .container {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.sectiune {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 50px 0;
+    width: 100%;
+    max-width: 1200px;
+    gap: 40px; 
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), rgba(238, 238, 238, 0.8)); /* Gradient de fundal */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.imagine-stanga, .imagine-dreapta {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.imagine-stanga img, .imagine-dreapta img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.text-dreapta button {
+  background: url('logo avm.png') no-repeat center center;
+  background-size: cover; 
+  border: 4px ridge #7FDD4C; 
+  border-radius: 20px; 
+  width:200px; 
+  height: 80px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer; 
+  overflow: hidden; 
+  margin-top: -60px;
+  margin-bottom: 80px;
+
+}
+
+.my-button {
+  background-color: #7FDD4C;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease; 
+  transform: scale(1); 
+}
+
+.button:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+.text-dreapta, .text-stanga {
+    flex: 1;
+    padding: 20px;
+    text-align: justify;
+}
+
+.text-dreapta h2, .text-stanga h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center; 
+}
+
+.text-dreapta p, .text-stanga p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    margin-top: 10px;
+}
+
+
+#h22 {
+    margin-top: 40px;
+}
+
+#p22 {
+    margin-top: 20px;
+}
+
+#p222, #p221 {
+    margin-top: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .sectiune {
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .imagine-stanga, .imagine-dreapta {
+        margin-bottom: 20px;
+    }
+
+
+
+    .text-dreapta, .text-stanga {
+        text-align: center;
+    }
+
+
+
+    .text-dreapta p, .text-stanga p {
+        font-size: 1rem;
+    }
+}
+
+.footer {
+  position: relative;
+  bottom:0;
+  background-image: url(engin-akyurt-HEMIBJ8QQuA-unsplash.jpg);
+  background-size: 1000px;
+  width: 100%;
+  height: 200px;
+    
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.text_stanga {
+  text-align: left;
+  color: white;
+  flex: 1;
+}
+
+.text_dreapta {
+  text-align: right;
+  color: white;
+  flex: 1;
+}
+
+.text_dedesupt {
+  margin-top: 40px; 
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  
+}
+
+
+
